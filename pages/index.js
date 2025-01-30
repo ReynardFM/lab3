@@ -17,7 +17,7 @@ function ToggleHide() {
   const [isHide, setHide] = useState(false);
   return(
     <>
-      <h1>1. IMPLEMENT BUTTON CLICK EVENT</h1>
+      <h1>1. IMPLEMENT BUTTON CLICK EVENT:</h1>
       <button onClick={() => setHide(!isHide)}>{isHide ? "Show" : "Hide"}</button>    
       {isHide ? <h1></h1> : <h1>This a text.  </h1>}
     </>
@@ -55,6 +55,7 @@ function Form() {
 
   return (
     <>
+      <h1>2. HANDLING FORM SUBMISSION: </h1>
       <form onSubmit={handleSubmit}>
         <input type="text" onKeyUp={getInput} placeholder="Type here" />
         <button type="submit">Submit</button>
@@ -102,6 +103,7 @@ function List(){
   ];
   return(
     <>
+      <h1>3. CONDITIONAL RENDERING BASED ON STATE: </h1>
       <h2>List of Items</h2>
       <button style={{marginRight: 10 + 'px'}} onClick={() => setCategory("All")}>All</button>
       {uniqueCategory.map((item, index) => (       
@@ -133,6 +135,7 @@ function Hover(){
 
   return(
     <>
+      <h1>4. ADDING A HOVER INTERACTION:  </h1>
       <button style={{background: color, color: "black", margin:10 +"px", width:20+"em"}} onMouseEnter={() => handleHover()} onMouseLeave={() => handleLeave()}>Hover</button>
     </>
   );
